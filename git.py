@@ -23,7 +23,11 @@ Contents
 	
 	2.1 Creating a local repository
 	2.2 Adding your repository to GIT
-3.
+	
+3.	Committing and Pushing
+
+	3.1 Linking your Account
+	3.2 Pushing your Commit
 4.
 
 1. Install
@@ -125,3 +129,41 @@ To finally commit:
 	
 This commits everything that has been added or staged, and adds a 
 comments 'add README.md' to the commit.
+
+
+
+3. Committing and Pushing
+
+	3.1 Linking your Account
+
+	
+The file README.md is now staged. It has been COMMITTED. This means that
+changes have been saved but not necessarily PUSHED up to the online
+repository.
+
+To do this you need to link your online account to your local repo.
+Create an account at github, and select the tab where it says to create
+a new repository.
+
+Upon creating a new repository, a page with a clear tutorial will show.
+
+In this instance use the section titled 'Push an existing repository 
+from the command line'.
+Change directory into where your repo is stored locally, then follow
+the instructions. (I am going to just copy and paste their tutorial)
+
+	git remote add origin https://github.com/Bubblehead333/repo_name.git
+	
+This points the repo to the online URL to where the files will be 
+stored. 
+
+
+
+	3.2 Pushing your Commit
+	
+	git push -u origin master
+	
+This will PUSH the COMMITted files up to the online repo. To finish
+the PUSH you will have to fill in your online credentials. 
+
+It is wise then to check whether your files have successfully uploaded.
