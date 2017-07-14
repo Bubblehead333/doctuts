@@ -24,11 +24,15 @@ Contents
 	2.1 Creating a local repository
 	2.2 Adding your repository to GIT
 	
+	
+	
 3.	Committing and Pushing
 
 	3.1 Linking your Account
 	3.2 Pushing your Commit
-4.
+	
+	
+4.	Cloning or downloading a repository
 
 1. Install
 
@@ -163,7 +167,29 @@ stored.
 	
 	git push -u origin master
 	
-This will PUSH the COMMITted files up to the online repo. To finish
+This will PUSH the COMMITTed files up to the online repo. To finish
 the PUSH you will have to fill in your online credentials. 
 
 It is wise then to check whether your files have successfully uploaded.
+
+
+
+	4. Cloning or downloading a repository
+	
+To download a repo onto your local, go to github.com and log into your
+account. Then navigate to the repo you wish to download, and click the
+'Clone or download' button. This will give you an SSH URL so you can 
+download the repo via GIT. You can also use HTTPS protocol though this
+is less secure.
+When you have the URL you wish to use, and you are in the directory you 
+want, you can the use the following:
+
+
+	git clone [httpURL]
+	
+	
+This will download the entire repo to a folder in your current local
+directory.
+	
+	
+
