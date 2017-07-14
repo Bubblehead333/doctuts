@@ -26,6 +26,8 @@ Contents
 	2.2 Adding your files to GIT
 	
 	
+	
+	
 3.	Committing and Pushing
 --------------------------
 
@@ -34,12 +36,16 @@ Contents
 	3.2 Pushing your Commit
 	
 	
+
 4. 	Pulling
 -----------
 	
 	4.1 Pulling Requests
 	
 	
+=======
+4.	Cloning or downloading a repository
+
 
 1. Install
 ----------
@@ -216,7 +222,56 @@ To do this you can use:
 	
 	git push -u origin master
 	
-This will PUSH the COMMITted files up to the online repo. To finish
+This will PUSH the COMMITTed files up to the online repo. To finish
 the PUSH you will have to fill in your online credentials. 
 
 It is wise then to check whether your files have successfully uploaded.
+
+
+
+4. Pulling, Cloning or downloading a repository
+-----------------------------------------------
+	
+	4.1 Cloning a Repository
+	--------------------------------------
+	
+To download a repo onto your local, go to github.com and log into your
+account. Then navigate to the repo you wish to download, and click the
+'Clone or download' button. This will give you an SSH URL so you can 
+download the repo via GIT. You can also use HTTPS protocol though this
+is less secure.
+When you have the URL you wish to use, and you are in the directory you 
+want, you can the use the following:
+
+
+	git clone [httpURL]
+	
+	
+This will download the entire repo to a folder in your current local
+directory.
+	
+	
+	
+	4.2 Pulling and Merging Requests
+	--------------------------------
+	
+You can pull updated files from the online repo with:
+
+
+		git pull
+		
+		
+Make sure you are in the correct directory to begin with, then the 
+command will pull any file that is new or has been updated. 
+
+However merge conflicts will come up if a file that has been edited on 
+your local has been attempted to have been updated. Upon returning to 
+your IDE, you may be met with a message that reads you must reload the 
+file. This will include all local changes and add in any new changes 
+that had no conflicts with merging. 
+
+
+Another thing, you cannot do a pull if you have not committed your local
+edited work. Command prompt will tell you this when attempting a pull
+while you have uncommitted local changes. 
+
