@@ -13,28 +13,41 @@ stash.com  	- Is the business use of GIT. This has recently been updated
 Contents
 
 1. Install
+----------
 
 	1.1 Installing GIT on Raspberry Pi
 	1.2 Creating a Global User Account
-	
-	
+
 
 2. Creating a Repository
+------------------------
 	
 	2.1 Creating a local repository
-	2.2 Adding your repository to GIT
+	2.2 Adding your files to GIT
+	
 	
 3.	Committing and Pushing
+--------------------------
 
 	3.1 Linking your Account
+	3.2 Making a Commit
 	3.2 Pushing your Commit
-4.
+	
+	
+4. 	Pulling
+-----------
+	
+	4.1 Pulling Requests
+	
+	
 
 1. Install
+----------
 
 
 
 	1.1 Install GIT on Raspberry Pi
+	-------------------------------
 	
 	
 To install GIT on a Raspberry Pi:
@@ -45,6 +58,7 @@ To install GIT on a Raspberry Pi:
 
 
 	1.2 Creating a Global User Account
+	----------------------------------
 	
 	
 	git config --global user.name "Your Name"
@@ -59,9 +73,15 @@ This tells GIT which text editor you will use by default. In this
 instance we are using nano.
 
 
+
 2. Creating a Repository
+------------------------
+
+
 	2.1 Creating a local repository
+	-------------------------------
 	
+
 	
 It is first wise to create a directory in which your files will be 
 stored in. For short you can use:
@@ -100,7 +120,8 @@ directory as a GIT repo.
 
 
 	
-	2.2 Adding your repository to GIT
+	2.2 Adding your files to GIT
+	---------------------------------
 	
 To add your new file, use:
 
@@ -121,20 +142,29 @@ If you wish to see which files have been stage to commit, you can use:
 	git status
 	
 	
-To finally commit:
+You can also monitor the changes within the files that have been added.
 
 
-	git commit -am 'add README.md'
+	git diff
 	
 	
-This commits everything that has been added or staged, and adds a 
-comments 'add README.md' to the commit.
+Shows the differences of the files that have not yet been staged.
+
+
+	git diff --staged
+	
+	
+Shows the differences of files that have been staged to the last file
+version.	
 
 
 
 3. Committing and Pushing
+-------------------------
+
 
 	3.1 Linking your Account
+	------------------------
 
 	
 The file README.md is now staged. It has been COMMITTED. This means that
@@ -157,9 +187,32 @@ the instructions. (I am going to just copy and paste their tutorial)
 This points the repo to the online URL to where the files will be 
 stored. 
 
+	
+	
+	3.2 Making a Commit
+	-------------------
+	
+To finally commit:
 
 
-	3.2 Pushing your Commit
+	git commit -am 'add README.md'
+	
+	
+This commits everything that has been added or staged, and adds a 
+comments 'add README.md' to the commit.
+
+Committing a file is almost like saving your file LOCALLY. You can 
+uncommit your file so that when you push, that file is not included.
+To do this you can use:
+
+
+	git reset 'file_name'
+	
+
+
+
+	3.3 Pushing your Commit
+	------------------------
 	
 	git push -u origin master
 	
